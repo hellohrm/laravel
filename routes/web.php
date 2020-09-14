@@ -24,22 +24,22 @@ Route::get('/admin', function () {
 
 Route::get('/config-cache', function () {
     $exitcode=Artisan::call('config:cache');
-    return 'config:cache' + $exitcode;
+    return 'config:cache' ;
 });
 
 Route::get('/config-clear', function () {
     $exitcode=Artisan::call('config:clear');
-    return 'config:clear' + $exitcode;
+    return 'config:clear';
 });
 
 Route::get('/route-cache', function () {
     $exitcode=Artisan::call('route:cache');
-    return 'route:cache' + $exitcode;
+    return 'route:cache';
 });
 
 Route::get('/route-clear', function () {
     $exitcode=Artisan::call('route:clear');
-    return 'route:clear' + $exitcode;
+    return 'route:clear' ;
 });
 
 
