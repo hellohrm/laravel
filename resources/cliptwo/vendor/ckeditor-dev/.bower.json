@@ -1,0 +1,15 @@
+{
+  "name": "ckeditor-dev",
+  "homepage": "https://github.com/ckeditor/ckeditor-dev",
+  "version": "4.8.0",
+  "_release": "4.8.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.8.0",
+    "commit": "230f715926634e4056a87a572c94707c4190921c"
+  },
+  "_source": "https://github.com/ckeditor/ckeditor-dev.git",
+  "_target": "^4.8.0",
+  "_originalSource": "ckeditor-dev",
+  "_direct": true
+}

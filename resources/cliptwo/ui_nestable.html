@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- Template Name: ClipTwo - Responsive Admin Template build with Bootstrap | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+	<!-- partial:partials/head/_meta.html -->
+	<!-- partial -->
+	<!-- partial:partials/head/_main_css.html -->
+	<!-- partial -->
+	<!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</head>
+<!-- end: HEAD -->
+
+<body>
+	<div id="app">
+		<!-- partial:partials/_shared/_sidebar.html -->
+		<!-- partial -->
+		<div class="app-content">
+			<!-- partial:partials/_shared/_top-navbar.html -->
+			<!-- partial -->
+			<div class="main-content">
+				<div class="wrap-content container" id="container">
+					<!-- start: PAGE TITLE -->
+					<section id="page-title">
+						<div class="row">
+							<div class="col-sm-8">
+								<h1 class="mainTitle">Nestable List</h1>
+								<span class="mainDescription">Drag &amp; drop hierarchical list with mouse and touch compatibility</span>
+							</div>
+							<ol class="breadcrumb">
+								<li>
+									<span>UI Elements</span>
+								</li>
+								<li class="active">
+									<span>Nestable</span>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<!-- end: PAGE TITLE -->
+					<!-- start: NESTABLE LIST -->
+					<div class="container-fluid container-fullw bg-white">
+						<div>
+							<div class="row">
+								<div class="col-md-6">
+									<!-- start: DRAGGABLE HANDLES 1 -->
+									<div class="dd" id="nestable">
+										<ol class="dd-list">
+											<li class="dd-item" data-id="1">
+												<div class="dd-handle">
+													Item 1
+												</div>
+											</li>
+											<li class="dd-item" data-id="2">
+												<div class="dd-handle">
+													Item 2
+												</div>
+												<ol class="dd-list">
+													<li class="dd-item" data-id="3">
+														<div class="dd-handle">
+															Item 3
+														</div>
+													</li>
+													<li class="dd-item" data-id="4">
+														<div class="dd-handle">
+															Item 4
+														</div>
+													</li>
+													<li class="dd-item" data-id="5">
+														<div class="dd-handle">
+															Item 5
+														</div>
+														<ol class="dd-list">
+															<li class="dd-item" data-id="6">
+																<div class="dd-handle">
+																	Item 6
+																</div>
+															</li>
+															<li class="dd-item" data-id="7">
+																<div class="dd-handle">
+																	Item 7
+																</div>
+															</li>
+															<li class="dd-item" data-id="8">
+																<div class="dd-handle">
+																	Item 8
+																</div>
+															</li>
+														</ol>
+													</li>
+													<li class="dd-item" data-id="9">
+														<div class="dd-handle">
+															Item 9
+														</div>
+													</li>
+													<li class="dd-item" data-id="10">
+														<div class="dd-handle">
+															Item 10
+														</div>
+													</li>
+												</ol>
+											</li>
+											<li class="dd-item" data-id="11">
+												<div class="dd-handle">
+													Item 11
+												</div>
+											</li>
+											<li class="dd-item" data-id="12">
+												<div class="dd-handle">
+													Item 12
+												</div>
+											</li>
+										</ol>
+									</div>
+									<!-- end: DRAGGABLE HANDLES 1 -->
+								</div>
+								<div class="col-md-6">
+									<h5>Data binding</h5>
+									<div class="well" id="nestable-output">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: NESTABLE LIST -->
+				</div>
+			</div>
+		</div>
+		<!-- partial:partials/_shared/_footer.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_off-sidebar.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_setting.html -->
+		<!-- partial -->
+	</div>
+	<!-- start: JAVASCRIPTS -->
+	<!-- partial:partials/script/_main_vendor.html -->
+	<!-- partial -->
+	<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<script src="vendor/nestable/jquery.nestable.js"></script>
+	<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- partial:partials/script/_main_script.html -->
+	<!-- partial -->
+	<!-- start: JavaScript Event Handlers for this page -->
+	<script src="assets/js/ui-nestable.min.js"></script>
+	<script>
+		jQuery(document).ready(function () {
+			UINestable.init();
+		});
+	</script>
+	<!-- end: JavaScript Event Handlers for this page -->
+	<!-- end: JAVASCRIPTS -->
+</body>
+
+</html>

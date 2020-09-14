@@ -1,0 +1,45 @@
+{
+  "name": "bootstrap-rating",
+  "main": "bootstrap-rating.js",
+  "version": "1.5.0",
+  "homepage": "https://github.com/dreyescat/bootstrap-rating",
+  "author": {
+    "name": "dreyescat",
+    "email": "dreyes.cat@gmail.com"
+  },
+  "description": "A small jQuery plugin that turns an input field into a highly customizable rating component",
+  "keywords": [
+    "rating",
+    "fraction",
+    "jquery",
+    "plugin",
+    "bootstrap",
+    "fontawesome",
+    "component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.2.0",
+    "fontawesome": "~4.2.0"
+  },
+  "_release": "1.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.0",
+    "commit": "81ac2b2f59d97a264b4fe07c6fa011ecd6f35cfd"
+  },
+  "_source": "https://github.com/dreyescat/bootstrap-rating.git",
+  "_target": "^1.5.0",
+  "_originalSource": "bootstrap-rating",
+  "_direct": true
+}

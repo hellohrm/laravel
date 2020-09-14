@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- Template Name: ClipTwo - Responsive Admin Template build with Bootstrap | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+	<!-- partial:partials/head/_meta.html -->
+	<!-- partial -->
+	<!-- partial:partials/head/_main_css.html -->
+	<!-- partial -->
+	<!-- end: ClipTwo CSS -->
+	<!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</head>
+<!-- end: HEAD -->
+
+<body>
+	<div id="app">
+		<!-- partial:partials/_shared/_sidebar.html -->
+		<!-- partial -->
+		<div class="app-content">
+			<!-- partial:partials/_shared/_top-navbar.html -->
+			<!-- partial -->
+			<div class="main-content">
+				<div class="wrap-content container" id="container">
+					<!-- start: PAGE TITLE -->
+					<section id="page-title">
+						<div class="row">
+							<div class="col-sm-8">
+								<h1 class="mainTitle">Charts</h1>
+								<span class="mainDescription">Simple, clean and engaging charts for designers and developers.</span>
+							</div>
+							<ol class="breadcrumb">
+								<li class="active">
+									<span>Charts</span>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<!-- end: PAGE TITLE -->
+					<!-- start: LINE CHART -->
+					<div class="container-fluid container-fullw bg-white">
+						<div class="row">
+							<div class="col-sm-12">
+								<h5 class="over-title margin-bottom-15">Line
+									<span class="text-bold">Chart</span>
+								</h5>
+								<div class="row">
+									<div class="col-sm-6">
+										<canvas id="lineChart" class="full-width"></canvas>
+									</div>
+									<div class="col-sm-6">
+										<p class="margin-bottom-20">
+											A line chart is a way of plotting data points on a line. Often, it is used to show trend data, and the comparison of two
+											data sets.
+										</p>
+										<p>
+											The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts
+											is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours
+											for the points and strokes of the points. These colours are strings just like CSS. You can use RGBA, RGB, HEX
+											or HSL notation.
+										</p>
+										<p>
+											The label key on each dataset is optional, and can be used when generating a scale for the chart.
+										</p>
+										<p class="margin-top-20">
+											<div id="lineLegend" class="chart-legend"></div>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: LINE CHART -->
+					<!-- start: BAR CHART -->
+					<div class="container-fluid container-fullw">
+						<div class="row">
+							<div class="col-sm-12">
+								<h5 class="over-title margin-bottom-15">Bar
+									<span class="text-bold">Chart</span>
+								</h5>
+								<div class="row">
+									<div class="col-sm-6">
+										<p class="margin-bottom-20">
+											A bar chart is a way of showing data as bars. It is sometimes used to show trend data, and the comparison of multiple data
+											sets side by side.
+										</p>
+										<p>
+											The bar chart has the a very similar data structure to the line chart, and has an array of datasets, each with colours and
+											an array of data. Again, colours are in CSS format. We have an array of labels too for display. In the example,
+											we are showing the same data as the previous line chart example.
+										</p>
+										<p>
+											The label key on each dataset is optional, and can be used when generating a scale for the chart.
+										</p>
+										<p class="margin-top-20">
+											<div id="barLegend" class="chart-legend"></div>
+										</p>
+									</div>
+									<div class="col-sm-6">
+										<canvas id="barChart" class="full-width"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: BAR CHART -->
+					<!-- start: DOUGHNUT CHART -->
+					<div class="container-fluid container-fullw bg-white">
+						<div class="row">
+							<div class="col-sm-12">
+								<h5 class="over-title margin-bottom-15">Doughnut
+									<span class="text-bold">Chart</span>
+								</h5>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="text-center margin-bottom-15">
+											<canvas id="doughnutChart" class="full-width"></canvas>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<p>
+											Pie and doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each
+											segment shows the proportional value of each piece of data.
+										</p>
+										<p>
+											They are excellent at showing the relational proportions between data.
+										</p>
+										<p>
+											Pie and doughnut charts are effectively the same class in Chart.js, but have one different default value - their
+											<code>percentageInnerCutout</code>. This equates what percentage of the inner should be cut out. This defaults to
+											<code>0</code> for pie charts, and
+											<code>50</code> for doughnuts.
+										</p>
+										<p class="margin-top-20">
+											<div id="doughnutLegend" class="chart-legend"></div>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: DOUGHNUT CHART -->
+					<!-- start: PIE CHART -->
+					<div class="container-fluid container-fullw">
+						<div class="row">
+							<div class="col-sm-12">
+								<h5 class="over-title margin-bottom-15">Pie
+									<span class="text-bold">Chart</span>
+								</h5>
+								<div class="row">
+									<div class="col-sm-6">
+										<p>
+											Pie and doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each
+											segment shows the proportional value of each piece of data.
+										</p>
+										<p>
+											They are excellent at showing the relational proportions between data.
+										</p>
+										<p>
+											Pie and doughnut charts are effectively the same class in Chart.js, but have one different default value - their
+											<code>percentageInnerCutout</code>. This equates what percentage of the inner should be cut out. This defaults to
+											<code>0</code> for pie charts, and
+											<code>50</code> for doughnuts.
+										</p>
+										<p class="margin-top-20">
+											<div id="pieLegend" class="chart-legend"></div>
+										</p>
+									</div>
+									<div class="col-sm-6">
+										<div class="text-center margin-bottom-15">
+											<canvas id="pieChart" class="full-width"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: PIE CHART -->					
+					<!-- start: RADAR CHART -->
+					<div class="container-fluid container-fullw">
+						<div class="row">
+							<div class="col-sm-12">
+								<h5 class="over-title margin-bottom-15">Radar
+									<span class="text-bold">Chart</span>
+								</h5>
+								<div class="row">
+									<div class="col-sm-6">
+										<p>
+											A radar chart is a way of showing multiple data points and the variation between them.
+										</p>
+										<p>
+											They are often useful for comparing the points of two or more different data sets.
+										</p>
+										<p>
+											For a radar chart, to provide context of what each point means, we include an array of strings that show around each point
+											in the chart. For the radar chart data, we have an array of datasets. Each of these is an object, with a fill
+											colour, a stroke colour, a colour for the fill of each point, and a colour for the stroke of each point. We also
+											have an array of data values.
+										</p>
+										<p class="margin-top-20">
+											<div id="radarLegend" class="chart-legend"></div>
+										</p>
+									</div>
+									<div class="col-sm-6">
+										<canvas id="radarChart" class="full-width"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: RADAR CHART -->
+				</div>
+			</div>
+		</div>
+		<!-- partial:partials/_shared/_footer.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_off-sidebar.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_setting.html -->
+		<!-- partial -->
+	</div>	
+	<!-- start: JAVASCRIPTS -->
+	<!-- partial:partials/script/_main_vendor.html -->
+	<!-- partial -->
+	<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<script src="vendor/chart.js/dist/Chart.min.js"></script>
+	<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- partial:partials/script/_main_script.html -->
+	<!-- partial -->
+	<!-- start: JavaScript Event Handlers for this page -->
+	<script src="assets/js/charts.min.js"></script>
+	<script>
+		jQuery(document).ready(function () {
+			Charts.init();
+		});
+	</script>
+	<!-- end: JavaScript Event Handlers for this page -->
+	<!-- end: JAVASCRIPTS -->
+</body>
+
+</html>

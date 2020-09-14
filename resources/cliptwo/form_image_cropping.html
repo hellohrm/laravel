@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- Template Name: ClipTwo - Responsive Admin Template build with Bootstrap | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+	<!-- partial:partials/head/_meta.html -->
+	<!-- partial -->
+	<!-- partial:partials/head/_main_css.html -->
+	<!-- partial -->
+	<!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+	<link href="vendor/Jcrop/jquery.Jcrop.min.css" rel="stylesheet" media="screen">
+	<!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</head>
+<!-- end: HEAD -->
+
+<body>
+	<div id="app">
+		<!-- partial:partials/_shared/_sidebar.html -->
+		<!-- partial -->
+		<div class="app-content">
+			<!-- partial:partials/_shared/_top-navbar.html -->
+			<!-- partial -->
+			<div class="main-content">
+				<div class="wrap-content container" id="container">
+					<!-- start: PAGE TITLE -->
+					<section id="page-title">
+						<div class="row">
+							<div class="col-sm-8">
+								<h1 class="mainTitle">Image Cropping</h1>
+								<span class="mainDescription">Jcrop is the quick and easy way to add image cropping functionality to your web application.</span>
+							</div>
+							<ol class="breadcrumb">
+								<li>
+									<span>Forms</span>
+								</li>
+								<li class="active">
+									<span>Image Cropping</span>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<!-- end: PAGE TITLE -->
+					<div class="container-fluid container-fullw bg-white">
+						<div class="row">
+							<div class="col-md-12">
+								<h5 class="over-title margin-bottom-15">Basic
+									<span class="text-bold">Handler</span>
+								</h5>
+								<p class="margin-bottom-20">
+									<b>An example with a basic event handler.</b> Here we've tied several form values together with a simple event handler
+									invocation. The result is that the form values are updated in real-time as the selection is changed using Jcrop's
+									<em>onChange</em> handler.
+								</p>
+								<p>
+									That's how easily Jcrop can be integrated into a traditional web form!
+								</p>
+								<!-- This is the image we're attaching Jcrop to -->
+								<img src="vendor/Jcrop/demo_files/sago.jpg" id="target" alt="[Jcrop Example]" />
+								<!-- This is the form that our event handler fills -->
+								<form id="coords" class="coords margin-top-20" onsubmit="return false;" action="http://example.com/post.php">
+									<div class="inline-labels">
+										<label>
+											X1
+											<input type="text" size="4" id="x1" name="x1" />
+										</label>
+										<label>
+											Y1
+											<input type="text" size="4" id="y1" name="y1" />
+										</label>
+										<label>
+											X2
+											<input type="text" size="4" id="x2" name="x2" />
+										</label>
+										<label>
+											Y2
+											<input type="text" size="4" id="y2" name="y2" />
+										</label>
+										<label>
+											W
+											<input type="text" size="4" id="w" name="w" />
+										</label>
+										<label>
+											H
+											<input type="text" size="4" id="h" name="h" />
+										</label>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid container-fullw">
+						<div class="row">
+							<div class="col-md-12">
+								<h5 class="over-title margin-bottom-15">Preview
+									<span class="text-bold">Pane</span>
+								</h5>
+								<p>
+									<b>An example implementing a preview pane.</b>
+									Obviously the most visual demo, the preview pane is accomplished entirely outside of Jcrop with a simple jQuery-flavored
+									callback. This type of interface could be useful for creating a thumbnail or avatar. The onChange event handler
+									is used to update the view in the preview pane.
+								</p>
+								<img src="vendor/Jcrop/demo_files/pool.jpg" id="target2" alt="[Jcrop Example]" />
+							
+								<div id="preview-pane">
+									<div class="preview-container">
+										<img src="vendor/Jcrop/demo_files/pool.jpg" class="jcrop-preview" id="Preview" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid container-fullw bg-white">
+						<div class="row">
+							<div class="col-md-12">
+								<h5 class="over-title margin-bottom-15">Animations
+									<span class="text-bold">+ Transitions</span>
+								</h5>
+								<p>
+									<b>Animation/Transitions.</b>
+									Demonstration of animateTo API method and transitions for bgColor and bgOpacity options. Color fading requires inclusion
+									of John Resig's jQuery
+									<a href="http://plugins.jquery.com/project/color">
+										Color Animations
+									</a>
+									plugin. If it is not included, colors will not fade.
+								</p>
+								<div class="alert alert-warning no-display" id="shadetxt">
+									<b>Experimental shader active.</b>
+									Jcrop now includes a shading mode that facilitates building better transparent Jcrop instances. The experimental shader is
+									less robust than Jcrop's default shading method and should only be used if you require this functionality.
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<img src="vendor/Jcrop/demo_files/sago.jpg" id="target3" alt="Jcrop Image" />
+									</div>
+									<div class="col-md-12" id="interface">
+										<div class="checkbox clip-check check-primary">
+											<input type="checkbox" id="fadetog" value="1">
+											<label for="fadetog">
+												Enable fading (bgFade: true)
+											</label>
+										</div>
+										<div class="checkbox clip-check check-primary">
+											<input type="checkbox" id="shadetog" value="1">
+											<label for="shadetog">
+												Use experimental shader (shade: true)
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- partial:partials/_shared/_footer.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_off-sidebar.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_setting.html -->
+		<!-- partial -->
+	</div>
+	<!-- start: JAVASCRIPTS -->
+	<!-- partial:partials/script/_main_vendor.html -->
+	<!-- partial -->
+	<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<script src="vendor/Jcrop/jquery.Jcrop.min.js"></script>
+	<script src="vendor/Jcrop/jquery.color.js"></script>
+	<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- partial:partials/script/_main_script.html -->
+	<!-- partial -->
+	<!-- start: JavaScript Event Handlers for this page -->
+	<script src="assets/js/form-image-cropping.min.js"></script>
+	<script>
+		jQuery(document).ready(function () {
+			ImageCropping.init();
+		});
+	</script>
+	<!-- end: JavaScript Event Handlers for this page -->
+	<!-- end: JAVASCRIPTS -->
+</body>
+
+</html>

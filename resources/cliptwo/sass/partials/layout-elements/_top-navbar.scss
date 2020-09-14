@@ -1,0 +1,228 @@
+/* ---------------------------------------------------------------------- */
+/*  Top Navbar
+/* ---------------------------------------------------------------------- */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1089;
+    border: none;
+    margin-bottom: 0;
+    height: $header-height; 
+    padding: 0px !important; 
+    
+    .loading-bar-wrapper {
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+    .navbar-header {
+        z-index: 10;
+        @media (min-width: $screen-sm-min) {
+            width: $sideBar-width;
+        }
+        width: 100%;
+        //background: $white;
+        //border-bottom: 1px solid $border-default;
+        position: relative;
+        height: $header-height;
+        //@media (min-width: $screen-md-min) {
+        //    border-right: 1px solid $border-default;
+        //}
+        a {
+            line-height: $header-height;
+            height: $header-height;
+        }
+        .navbar-brand {
+            padding: 0 15px;
+            img {
+                display: inline-block;
+                margin-top: -6px;
+            }
+        }
+        .menu-toggler {
+            margin-right: 60px;
+            padding: 0 15px;
+            font-size: $font-size-extra-large;
+            color: $grey;
+        }
+        .sidebar-toggler {
+            font-size: $font-size-extra-large;
+            padding-right: 15px;
+            color: $grey;
+            &:hover {
+                color: $darkGrey;
+            }
+        }
+        .sidebar-mobile-toggler {
+            font-size: $font-size-extra-large;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: $grey;
+            &:hover {
+                color: $darkGrey;
+            }
+            >i {
+                position: relative;
+                z-index: -1;
+            }
+        }
+    }
+    .navbar-collapse {
+        border-bottom: 1px solid $border-default;
+        border-top: none;
+        background: $white;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        position: relative;
+        @media (min-width: $screen-sm-min) {
+            margin-left: $sideBar-width;
+            height: $header-height !important;
+            .nav {
+                height: auto !important;
+            }
+        }
+        @media (max-width: $screen-xs-max) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            overflow: hidden !important;
+            .nav {
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        &.in {
+            overflow-y: visible;
+        }
+    }
+    .app-slide-off &,
+    .app-offsidebar-open & {
+        @media (max-width: $screen-sm-max) {
+            position: absolute !important;
+        }
+    }
+    .app-navbar-fixed & {
+        @media (min-width: $screen-md-min) {
+            .navbar-collapse, .navbar-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                @include transform(translateZ(0));
+            }
+            .dropdown-off-sidebar {
+                position: fixed;
+                top: 0;
+                @include transform(translateZ(0));
+            }
+        }
+    }
+    .app-sidebar-closed & {
+        @media (min-width: $screen-md-min) {
+            .navbar-header {
+                width: $sideBar-closed-width;
+                .navbar-brand {
+                    display: none;
+                }
+                .sidebar-toggler {
+                    float: none !important;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+            .navbar-collapse {
+                margin-left: $sideBar-closed-width;
+            }
+        }
+    }
+    @media (max-width: $screen-sm-max) {
+        left: 0;
+        margin: 0;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        padding: 0px;
+    }
+    .app-sidebar-fixed & {
+        .navbar-header {
+            @media (min-width: $screen-md-min) {
+                position: fixed;
+                top: 0;
+            }
+        }
+    }
+    .close-handle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $white;
+        cursor: pointer;
+        z-index: 1001;
+        min-height: 40px;
+        .arrow-left,
+        .arrow-right {
+            background-color: $border-default;
+            border-radius: 10px;
+            bottom: 15px;
+            height: 8px;
+            left: 50%;
+            position: absolute;
+            @include transition(transform 0.2s ease 0s);
+            width: 24px;
+            margin-left: -12px;
+            cursor: pointer;
+        }
+        .arrow-left {
+            @include transform(translate3d(-8px, 0px, 0px) rotate(-10deg));
+        }
+        .arrow-right {
+            @include transform(translate3d(8px, 0px, 0px) rotate(10deg));
+        }
+    }    
+    .dropdown-off-sidebar {
+        position: absolute;
+        z-index: 11;
+        top: 0;
+        right: 0;
+        border-left: 1px solid $border-default;
+        width: 30px;
+        background: $white;
+        line-height: $header-height - 1;
+        color: $grey;
+        &:after {
+            position: absolute;
+            font-size: $font-size-extra-large;
+            padding: 0;
+            margin: 0;
+            font-family: 'themify';
+            content: "\e6da";
+            left: 5px;
+            top: 0;
+        }
+        .app-offsidebar-open & {
+            &:after {
+                content: "\e6d9";
+            }
+        }
+        .app-offsidebar-open & {
+            @media (min-width: $screen-md-min) {
+                position: fixed;
+            }
+        }
+        @media (max-width: $screen-sm-max) {
+            width: 50px;
+            height: 64px;
+            &:after {
+                left: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Template Name: ClipTwo - Responsive Admin Template build with Bootstrap | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+	<!-- partial:partials/head/_meta.html -->
+	<!-- partial -->
+	<!-- partial:partials/head/_main_css.html -->
+	<!-- partial -->
+	<!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+	<link href="vendor/dropzone/dist/min/basic.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/dropzone/dist/min/dropzone.min.css" rel="stylesheet" media="screen">
+	<!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</head>
+<!-- end: HEAD -->
+
+<body>
+	<div id="app">
+		<!-- partial:partials/_shared/_sidebar.html -->
+		<!-- partial -->
+		<div class="app-content">
+			<!-- partial:partials/_shared/_top-navbar.html -->
+			<!-- partial -->
+			<div class="main-content">
+				<div class="wrap-content container" id="container">
+					<!-- start: PAGE TITLE -->
+					<section id="page-title">
+						<div class="row">
+							<div class="col-sm-8">
+								<h1 class="mainTitle">Multiple File Upload</h1>
+								<span class="mainDescription">File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images.</span>
+							</div>
+							<ol class="breadcrumb">
+								<li>
+									<span>Forms</span>
+								</li>
+								<li class="active">
+									<span>Multiple File Upload</span>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<!-- end: PAGE TITLE -->
+					<div class="container-fluid container-fullw bg-white">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mb-3">
+									<p class="m-0 text-center">DropzoneJS is an open source library that provides drag&apos;n&apos;drop file uploads with image previews.
+									   <br>It’s lightweight, doesn’t depend on any other library (like jQuery) and is<a class="ml-2" href="http://www.dropzonejs.com/" target="_blank">highly customizable</a>
+									</p>
+								 </div>
+								<form class="dropzone mb-3 card d-flex flex-row justify-content-center flex-wrap" id="dropzone-area" action="#">									
+									<div id="dropzone-previews"></div>									
+								</form>
+								<p>
+									<small class="text-muted">This demo does not upload files to any server.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- partial:partials/_shared/_footer.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_off-sidebar.html -->
+		<!-- partial -->
+		<!-- partial:partials/_shared/_setting.html -->
+		<!-- partial -->
+	</div>
+
+	<!-- start: JAVASCRIPTS -->
+	<!-- partial:partials/script/_main_vendor.html -->
+	<!-- partial -->
+	<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<script src="vendor/dropzone/dist/min/dropzone.min.js"></script>
+	<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- partial:partials/script/_main_script.html -->
+	<!-- partial -->
+	<!-- start: JavaScript Event Handlers for this page -->
+	<script>
+		jQuery(document).ready(function () {
+
+			$(".dropzone-area").dropzone({
+				url: "/up",
+				autoProcessQueue: false,
+				uploadMultiple: true,
+				parallelUploads: 100,
+				maxFiles: 100,
+				dictDefaultMessage: '<em class="ion-upload color-blue-grey-100 icon-2x"></em><br>Drop files here to upload', // default messages before first drop
+				paramName: 'file', // The name that will be used to transfer the file
+				maxFilesize: 2, // MB
+				addRemoveLinks: true,
+				accept: function (file, done) {
+					if (file.name === 'justinbieber.jpg') {
+						done('Naha, you dont. :)');
+					} else {
+						done();
+					}
+				},
+				init: function () {
+					var dzHandler = this;
+					this.element.querySelector('button[type=submit]').addEventListener('click', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						dzHandler.processQueue();
+					});
+					this.on('addedfile', function (file) {
+						console.log('Added file: ' + file.name);
+					});
+					this.on('removedfile', function (file) {
+						console.log('Removed file: ' + file.name);
+					});
+					this.on('sendingmultiple', function () {});					
+					this.on('successmultiple', function ( /*files, response*/) {});					
+					this.on('errormultiple', function ( /*files, response*/) {});					
+				}
+			});
+		});
+	</script>
+	<!-- end: JavaScript Event Handlers for this page -->
+	<!-- end: JAVASCRIPTS -->
+</body>
+
+</html>

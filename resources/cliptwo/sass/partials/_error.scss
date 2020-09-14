@@ -1,0 +1,78 @@
+/* ---------------------------------------------------------------------- */
+
+/*  404 and 500 error
+/* ---------------------------------------------------------------------- */
+
+.error-full-page .page-error {
+    margin-top: 60px;
+}
+
+.page-error {
+    text-align: center;
+}
+
+.page-error .error-number {
+    display: block;
+    font-size: 200px;
+    font-weight: 100;
+    font-family: $font-family-secondary;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.page-error .error-details {
+    display: block;
+    padding-top: 0;
+    text-align: center;
+
+    .error-message {
+        font-family: $font-family-secondary;
+    }
+
+    p {
+        margin: 40px 0;
+    }
+}
+
+.page-error .error-details .btn-return {
+    margin: 10px 0;
+}
+
+.page-error .error-details h3 {
+    margin-top: 0;
+}
+
+.error-full-page {
+    overflow: hidden;
+}
+
+.error-full-page img {
+    display: none;
+}
+
+.error-full-page #canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.error-full-page #sound {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    overflow-y: auto;
+    margin-left: 35%;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    opacity: 0.3;
+    margin-top: 5%;
+}
+
+.error-full-page .video {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
